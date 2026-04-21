@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { PawPrint, MapPin, Clock, Star, Phone, MessageCircle, Heart, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import heroBg from './hero-bg.png';
+import logo from './logo.jpg';
 
 const reviews = [
   {
@@ -54,9 +56,9 @@ export default function App() {
       {/* HEADER */}
       <header className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
         <div className="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center">
-              <PawPrint size={24} fill="currentColor" />
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-primary shadow-sm flex items-center justify-center bg-white">
+              <img src={logo} alt="Logo Pet Peron" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
             </div>
             <div>
               <h1 className="font-display text-2xl text-navy leading-none">Pet Peron</h1>
@@ -81,13 +83,13 @@ export default function App() {
         <section className="relative w-full min-h-[80vh] flex flex-col justify-end items-center sm:items-start p-6 sm:p-12 md:p-24 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img 
-              src="/ChatGPT%20Image%2021_04_2026,%2014_51_21.png" 
+              src={heroBg} 
               alt="Pet Peron - Atendimento Especializado" 
               className="w-full h-full object-cover object-center"
               referrerPolicy="no-referrer"
             />
-            {/* Gradient overlay for better text readability */}
-            <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-transparent"></div>
+            {/* Gradient overlay for better text readability - Darkened for better contrast */}
+            <div className="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/60 to-transparent"></div>
           </div>
 
           <motion.div 
@@ -96,15 +98,21 @@ export default function App() {
             transition={{ duration: 0.6 }}
             className="relative z-10 max-w-2xl text-white"
           >
-            <h2 className="font-display text-5xl md:text-7xl mb-4 leading-tight uppercase font-black">
+            <div className="mb-4 inline-flex items-center gap-2 bg-primary/20 backdrop-blur-sm border border-primary/30 px-3 py-1 rounded-full">
+              <Star size={14} className="text-primary" fill="currentColor" />
+              <span className="text-[10px] font-black uppercase tracking-[0.2em] text-primary-light">Excelência em Indaiatuba</span>
+            </div>
+            <h2 className="font-display text-5xl md:text-8xl mb-8 leading-tight uppercase font-black drop-shadow-2xl">
               Pet Peron
             </h2>
-            <p className="text-lg md:text-2xl font-bold mb-2 uppercase tracking-wide">
-              CARINHO QUE O SEU PET SENTE DE LONGE.
-            </p>
-            <p className="text-white/90 text-base md:text-lg max-w-lg mb-8">
-              Banho, tosa e atendimento veterinário excepcional com amor, paciência e assertividade. Seu amigo de quatro patas no melhor lugar.
-            </p>
+            <div className="space-y-6 md:space-y-4 mb-10">
+              <p className="text-sm md:text-2xl font-bold uppercase tracking-widest text-white/90">
+                CARINHO QUE O SEU PET SENTE DE LONGE.
+              </p>
+              <p className="text-white/80 text-xs md:text-lg max-w-lg leading-relaxed">
+                Banho, tosa e atendimento veterinário excepcional com amor, paciência e assertividade. Seu amigo de quatro patas no melhor lugar.
+              </p>
+            </div>
             
             <a 
               href="https://wa.me/551938342599?text=Vim%20pela%20p%C3%A1gina%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20essa%20categoria." 
@@ -353,8 +361,11 @@ export default function App() {
 
       <footer className="bg-navy border-t border-white/10 py-8 px-6 text-center text-white/50 text-sm">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex items-center gap-2 text-white font-bold opacity-100">
-            <PawPrint size={18} fill="currentColor" className="text-primary"/> Pet Peron
+          <div className="flex items-center gap-3 text-white font-bold opacity-100 italic">
+            <div className="w-8 h-8 rounded-full overflow-hidden bg-white flex items-center justify-center grayscale-[0.3]">
+              <img src={logo} alt="Logo" className="w-full h-full object-cover" />
+            </div>
+            Pet Peron
           </div>
           <p>© {new Date().getFullYear()} Pet Peron. Todos os direitos reservados.</p>
         </div>
