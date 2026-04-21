@@ -1,8 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { PawPrint, MapPin, Clock, Star, Phone, MessageCircle, Heart, ShieldCheck, CheckCircle2 } from 'lucide-react';
-import heroBg from './hero-bg.png';
-import logo from './logo.jpg';
 
 const reviews = [
   {
@@ -58,7 +56,7 @@ export default function App() {
         <div className="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-primary shadow-sm flex items-center justify-center bg-white">
-              <img src={logo} alt="Logo Pet Peron" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              <img src="https://i.imgur.com/unp6a7j.jpeg" alt="Logo Pet Peron" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
             </div>
             <div>
               <h1 className="font-display text-2xl text-navy leading-none">Pet Peron</h1>
@@ -83,7 +81,7 @@ export default function App() {
         <section className="relative w-full min-h-[80vh] flex flex-col justify-end items-center sm:items-start p-6 sm:p-12 md:p-24 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img 
-              src={heroBg} 
+              src="https://i.imgur.com/Tk587JV.png" 
               alt="Pet Peron - Atendimento Especializado" 
               className="w-full h-full object-cover object-center"
               referrerPolicy="no-referrer"
@@ -363,7 +361,7 @@ export default function App() {
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-3 text-white font-bold opacity-100 italic">
             <div className="w-8 h-8 rounded-full overflow-hidden bg-white flex items-center justify-center grayscale-[0.3]">
-              <img src={logo} alt="Logo" className="w-full h-full object-cover" />
+              <img src="https://i.imgur.com/unp6a7j.jpeg" alt="Logo" className="w-full h-full object-cover" />
             </div>
             Pet Peron
           </div>
